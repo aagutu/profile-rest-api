@@ -5,6 +5,8 @@ from rest_framework import status
 from profiles_api import serializers
 
 
+
+
 class HelloApiView(APIView):
     """TestAPI View"""
     serializer_class = serializers.HelloSerializer
@@ -36,10 +38,6 @@ class HelloApiView(APIView):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-    def put(self, request, pk=None):
-        """Handle updating an object"""
-        return Response({'method': 'PUT'})
-
     def patch(self, request, pk=None):
         """Handles a partial update of an object"""
         return Response({'method': 'PATCH'})
@@ -47,3 +45,8 @@ class HelloApiView(APIView):
     def delete(self, request, pk=None):
         """Delete an object"""
         return Response({'method': 'DELETE'})
+
+    def put(self, request, pk=None):
+        """Handle updating an object"""
+        return Response({'method': 'PUT'})
+
