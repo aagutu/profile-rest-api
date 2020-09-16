@@ -133,7 +133,7 @@ dmypy.json
 *.box
 
 ### Idea PAtch###
-.idea/
+.idea
 # End of https://www.gitignore.io/api/python,vagrant
 eb-package.zip
 static/
